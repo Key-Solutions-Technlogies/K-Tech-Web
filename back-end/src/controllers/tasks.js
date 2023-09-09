@@ -51,6 +51,10 @@ export const getServicios = (req,res) => {
     res.send("Hello, world!");
 }
 
+export const setServicio = (req,res) => {
+    res.send("Hello, world!");
+}
+
 export const getServicio = (req,res) => {
     res.send("Hello, world!");
 }
@@ -67,6 +71,9 @@ export const getServicioFecha = (req,res) => {
 export const getServicioCliente = (req,res) => {
     res.send("Hello, world!");
 }
+export const updateServicio = (req,res) => {
+    res.send("Hello, world!");
+}
 
 
 export const setCliente = (req,res) => {
@@ -78,6 +85,10 @@ export const updateCliente = (req,res) => {
 }
 
 export const getClientes = (req,res) => {
+    res.send("Hello, world!");
+}
+
+export const getClienteId = (req,res) => {
     res.send("Hello, world!");
 }
 

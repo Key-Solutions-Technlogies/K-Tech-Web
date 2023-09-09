@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getCotizacionId, getCotizacionTipoServicio, getCotizaciones, getTipoServicios, setCotizaciones, setTipoServicio, updateCotizacion, updateTipoServicio } from "../controllers/tasks";
+import { getUsuarios,setUsuario,getClientes,setServicio,getCotizacionCliente, getClienteId, getCotizacionId, getCotizacionTipoServicio, getCotizaciones, getServicioCliente, getServicioFecha, getServicioId, getServicios, getTipoServicios, setCliente, setCotizaciones, setTipoServicio, updateCotizacion, updateServicio, updateTipoServicio } from "../controllers/tasks";
 
 const router = Router();
 
@@ -7,7 +7,6 @@ const router = Router();
 router.get('/tipoServicios', getTipoServicios)
 router.post('/tipoServicios',setTipoServicio)
 router.put('/tipoServicios',updateTipoServicio)
-
 
 router.get('/cotizaciones',getCotizaciones)
 router.post('/cotizaciones',setCotizaciones)
@@ -18,19 +17,20 @@ router.get('/cotizaciones/:tipoServicios',getCotizacionTipoServicio)
 router.get('/cotizaciones/:cliente',getCotizacionCliente)
 
 
-router.post('/servicios')
-router.get('/servicios/')
-router.get('/servicios/:id')
-router.get('/servicios/:fechaInicio')
-router.get('/servicios/:cliente')
-router.put('/servicios/:id')
+router.post('/servicios',setServicio)
+router.get('/servicios/',getServicios)
+router.get('/servicios/:id',getServicioId)
+router.get('/servicios/:fechaInicio',getServicioFecha)
+router.get('/servicios/:cliente',getServicioCliente)
+router.put('/servicios/:id',updateServicio)
 
-router.post('/clientes')
-router.get('/clientes')
-router.put('/clientes/:id')
+router.post('/clientes',setCliente)
+router.get('/clientes',getClientes)
+router.put('/clientes/:id',getClienteId)
 
-router.post('/usuarios')
-router.get('/usuarios')
+router.post('/usuarios',setUsuario)
+router.get('/usuarios',getUsuarios)
+
 
 
 
