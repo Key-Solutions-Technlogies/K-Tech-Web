@@ -3,14 +3,12 @@ import { config } from "./config"
 
 
 
-const connect = async() => {
-    const connection = await mysql.createConnection(config);
+export const connect = async() => {
+    return  await mysql.createConnection(config);
 
-    const result = await connection.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Cliente')
-    console.log(result);
+    
 }
 
-connect();
 
 
 

@@ -1,5 +1,176 @@
 
 
-@api = http://localhost:3000/tipoServicios
+@api = http://localhost:3000
 
-GET {{api}}
+///TIPO SERVICIOS API
+#####
+PUT {{api}}/tipoServicios/5
+Content-Type: application/json
+
+{
+    "tipoServicio": "Desarrollo",
+    "descripcion": "Desarrollo de productos tecnologicos"
+}
+
+
+#####
+GET {{api}}/tipoServicios
+
+
+###
+POST {{api}}/tipoServicios
+Content-Type: application/json
+
+{
+    "tipoServicio": "Consultoria",
+    "descripcion": "Se realiza una consultoria"
+}
+
+
+
+
+///COTIZACIONES API
+###
+//Obtener todas cotizaciones
+GET {{api}}/cotizaciones
+
+
+###
+GET {{api}}/cotizaciones/1
+
+//Obtener cotizaciones por tipo de servicio 
+###
+GET {{api}}/cotizaciones/1
+###
+//Obtener cotizaciones por cliente
+GET {{api}}/cotizaciones/1
+
+###
+//Actualizar una nueva cotizacion
+PUT  {{api}}/cotizaciones/1
+Content-Type: application/json
+
+{
+    "fecha" : "2023/01/23",
+    "mensaje" : "Me gustaria otro servicio ",
+    "idTipoServicio" : 1,
+    "idCliente" : 1
+
+}
+
+###
+//Agregar una nueva cotizacion
+POST {{api}}/cotizaciones
+Content-Type: application/json
+
+{
+    "fecha" : "2020-03-19",
+    "mensaje" : "Me gustaria un servicio ",
+    "idTipoServicio" : 1,
+    "idCliente" : 1
+}
+
+###
+//SERVICIOS API
+GET {{api}}/servicios/
+
+###
+//Obtener un servicio por id
+GET {{api}}/servicios/1
+
+###
+//Ver un servicio por fecha 
+
+GET {{api}}/servicios/fecha
+
+###
+//Ver servicios por cliente
+
+GET {{api}}/servicios/cliente
+
+
+
+###
+//Actualizar un servicio
+PUT  {{api}}/servicios/1
+Content-Type: application/json
+
+{
+    "idTipoServicio" : 1,
+    "descripcion" : "Se brinda servicios de desarrollo",
+    "costo": "1000",
+    "fechaInicio" : "2020-11-20",
+    "fechaFin": "2021-11-20",
+    "idCliente" : 1
+}
+
+###
+//Agregar un nuevo servicio
+POST {{api}}/servicios
+Content-Type: application/json
+
+{
+    "idTipoServicio" : 1,
+    "descripcion" : "Se brinda servicio de consultoria",
+    "costo": "1000",
+    "fechaInicio" : "2020-11-20",
+    "fechaFin": "2021-11-20",
+    "idCliente" : 1
+}
+
+
+//CLIENTES API
+###
+POST {{api}}/cliente
+Content-Type: application/json
+
+{
+    "nombre":"Federico",
+    "apellido":"Torres",
+    "correo":"federicotorres2109@gmail.com",
+    "empresa":"K-Tech"
+}
+
+
+###
+PUT {{api}}/cliente/1
+Content-Type: application/json
+
+{
+    "nombre":"Federico",
+    "apellido":"Torres",
+    "correo":"federicotorres2109@gmail.com",
+    "empresa":"TEC"
+}
+
+
+
+
+
+###
+GET {{api}}/clientes
+
+
+###
+GET {{api}}/cliente/1
+
+
+###
+
+
+POST {{api}}/usuarios
+Content-Type: application/json
+
+{
+    "correo":"Federicotorres2109@gmail.com",
+    "password":"123",
+    "numeroTelefono":"78261523"
+
+}
+
+
+###
+GET {{api}}/usuarios
+
+
+
