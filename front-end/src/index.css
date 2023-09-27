@@ -1,0 +1,32 @@
+:root {
+    --darkBlue: #022C5C;
+    --grayColor:#D9D9D9;
+    --greenColor: #47C736;
+    --mediumBlue: #0455B1;
+    --lightBlue: #8CAADE;
+    
+
+}
+
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Poppins;
+}
+
+.wrapper{
+    
+    margin: 0 auto;
+    
+    
+    
+}
+
+a {
+    text-decoration: none ;
+}
+

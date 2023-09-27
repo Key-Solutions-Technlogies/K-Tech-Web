@@ -1,0 +1,156 @@
+
+.blogSection
+{
+    
+    justify-content: center;
+    height: 900px;
+    
+}
+
+.blogs-articulosRecientes
+{
+    color: #022C5C;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px; 
+    padding-top: 30px;/* 106.667% */
+}
+.mySwiper
+{
+    
+    place-items: center;
+    margin: auto;
+    max-width: 900px;
+    padding-top: 50px;
+    height: 400px;
+    
+    padding-left: 80px;
+    
+    
+}
+
+.mySwiper-Swiper
+{
+    justify-content: center;
+    
+    height: 450px;
+    width: 100%;
+    
+}
+
+
+.contenedor-tarjeta
+{
+    align-items: center;
+    border-radius: 10px;
+    background: #F5F5F5;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 329px;
+    height: 399px;
+    flex-shrink: 0;
+    text-align: center;
+    position: relative;
+}
+    
+    
+    
+
+
+.tarjeta-img
+{
+    border-radius: 10px;
+    width: 329px;
+    height: 213px;
+    flex-shrink: 0;
+}
+
+.swiper-button-prev {
+    background-image: url("/src/assets/anterior.png") !important;
+    color: transparent !important;
+    padding-left: 20px !important;
+  }
+  
+.swiper-button-next {
+    background-image: url("/src/assets/siguiente.png") !important;
+    color: transparent !important;
+    padding-left: 20px !important;
+  }
+
+
+
+.tarjeta-descripcion
+{
+    color: #1B2D54;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0; /* 171.429% */
+}
+
+
+.tarjeta-titulo
+{
+    color: #1B2D54;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display;
+    font-size: 20px;
+    font-style: bold;
+    font-weight: 900;
+    line-height: 24px; /* 120% */
+    padding-bottom: 30px;
+}
+
+.tarjeta-boton
+{
+    
+    
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: var(--darkBlue);
+    border-radius: 4px;
+    color: #F5F5F5;
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+   
+    
+}
+
+
+
+.header-container
+{
+    background-color: #F5F5F5;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    
+}
+.header-blog
+{
+    color: #022C5C;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 106.667% */
+}

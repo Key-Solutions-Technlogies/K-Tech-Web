@@ -1,0 +1,67 @@
+header {
+    min-height: 60vh;
+    width: 100;
+    
+    
+    background-image: url('../../assets/formacionPersonal.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.wrapper {
+    
+    font-family: SF Pro Display;
+    width: 100%;
+    position: absolute;
+    padding-left: 40px;
+    top: 150px;
+    color: var(--darkBlue);
+    max-width: 427px;
+    margin-bottom: 0;
+    display: inline;
+    
+    
+    
+}
+
+.wrapper .btn-cotizacion{
+    border-radius: 4px;
+    background: var(--darkBlue);
+    color: #fff;
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    
+
+}
+
+header .wrapper .btn-cotizacion:hover{
+    border-radius: 4px;
+    background: #fff;
+    color: var(--darkBlue);
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+
+.header-title
+{
+    font-family: SF Pro Display;
+    font-size: 40px;
+    font-weight: 300;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.header1-title
+{
+    font-family: SF Pro Display;
+    font-size: 40px;
+    font-weight: 900;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 50px;
+}

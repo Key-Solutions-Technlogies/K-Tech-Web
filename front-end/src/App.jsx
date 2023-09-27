@@ -1,7 +1,18 @@
 import React from 'react'
+import {  Header, Navbar, Services, Solutions,Blog, Footer, Areas } from './components'
 
 const App = () => {
-  return <div>Hello</div>;
+  return <>
+  
+  <Header />
+  <Areas/>
+  <Services />
+  <Blog />
+  <Solutions />
+  
+  <Footer />
+  
+  </>;
   
 };
 

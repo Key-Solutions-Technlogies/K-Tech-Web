@@ -1,0 +1,149 @@
+
+
+.services
+{
+    background-color: var(--darkBlue);
+    height: 1000px;
+    width: 100%;
+
+}
+
+
+
+.tiposServicios
+{
+    
+    
+    display: grid;
+    justify-content: space-around;
+    
+    grid-template-columns: 550px 550px ;
+    grid-gap: 200px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    
+    
+}
+
+.tiposServicios-mapeado
+{
+    
+  min-width: 200px; /* Ancho mínimo de cada componente */
+  padding: 10px;
+  margin-right: 10px; /* Espacio entre componentes */
+  color: white;
+
+}
+
+.iconoCircular
+{
+    background: lightblue;
+    border-radius: 50%;
+    width: 174px;
+    height: 174px;
+    border: solid 4px #fff;
+}
+
+
+
+
+.tiposServicios-mapeado
+{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    
+}
+  
+.titulos-tipoServicios-mapeado
+{
+    align-items: center;
+    
+    
+}
+
+
+.tituloServicios-mapeado
+{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 128% */
+    list-style: circle;
+    position: relative;
+}
+
+.descripcionServicio
+{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px; /* 125% */
+}
+
+
+.botonServicio
+{
+    border-radius: 4px;
+    border: 1px solid var(--banco-pichincha-primary-blue-500, #0F265C);
+    background: #47C736;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    width: 172px;
+    height: 28px;
+    padding: 5px 5px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--darkBlue);
+}
+
+.tituloPrincipal-mapeado
+{
+    position: relative;
+    justify-content:space-evenly;
+    display: flex;
+    align-items: center;
+}
+.punto
+{
+   
+    height: 10px;
+    bottom: 10px;
+    
+}
+
+
+.titulo-Servicio-h2
+{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px; /* 106.667% */
+    padding-left: 54px;
+    padding-top: 54px;
+    margin-bottom: 0;
+}
+
+
+.titulo-Servicio-h1
+{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 71.111% */
+    padding-left: 54px;
+    
+    margin-top:11px;
+}
