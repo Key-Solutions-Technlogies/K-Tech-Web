@@ -4,7 +4,7 @@ import { connect} from "../database"
 //tipoServicios
 export const getTipoServicios =  async (req,res) => {
     const conn = await connect()
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.tipoServicio')
+    const [rows] = await conn.query('SELECT * FROM TipoServicio')
     console.log(rows)
     res.json(rows)
 }
@@ -13,7 +13,7 @@ export const getTipoServicios =  async (req,res) => {
 //post tipoServicios
 export const setTipoServicio = async (req,res) => {
     const conn = await connect();
-    const result = await conn.query('INSERT INTO bv4rkfhexrvnpun4adpx.tipoServicio (tipoServicio,descripcion) VALUES(?,?)', [req.body.tipoServicio, req.body.descripcion]);
+    const result = await conn.query('INSERT INTO TipoServicio (nombreServicio,descripcion,URL) VALUES(?,?,?)', [req.body.tipoServicio, req.body.descripcion,req.body.url]);
     res.json(result[0]["insertId"]);
 }
 
@@ -21,7 +21,7 @@ export const setTipoServicio = async (req,res) => {
 
 export const updateTipoServicio = async  (req,res) => {
     const conn  = await connect();
-    const result = await conn.query('UPDATE bv4rkfhexrvnpun4adpx.tipoServicio SET tipoServicio =?, descripcion =? WHERE idTipoServicio =?', [req.body.tipoServicio, req.body.descripcion, req.params.idTipoServicio]);
+    const result = await conn.query('UPDATE TipoServicio SET nombreServicio =?, descripcion =?, URL=? WHERE idTipoServicio =?', [req.body.tipoServicio, req.body.descripcion, req.body.url, req.params.idTipoServicio]);
     //Retorno de numero de filas cambiadas
     res.json(result[0]["changedRows"]);
 }
@@ -33,7 +33,7 @@ export const updateTipoServicio = async  (req,res) => {
 export const getCotizaciones = async (req,res) => {
     
     const conn = await connect()
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Cotizacion')
+    const [rows] = await conn.query('SELECT * FROM Consulta')
     console.log(rows)
     res.json(rows)
 
@@ -41,14 +41,14 @@ export const getCotizaciones = async (req,res) => {
 
 export const getCotizacionId = async (req,res) => {
     const conn = await connect();
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Cotizacion WHERE bv4rkfhexrvnpun4adpx.Cotizacion.idConsulta = ?', [req.params.id]);
+    const [rows] = await conn.query('SELECT * FROM Consulta WHERE Consulta.idConsulta = ?', [req.params.id]);
     console.log(rows)
     res.json(rows);
 }
 
 export const getCotizacionTipoServicio = async (req,res) => {
    const conn = await connect();
-   const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Cotizacion WHERE bv4rkfhexrvnpun4adpx.Cotizacion.idTipoServicio =?', [req.params.id]);
+   const [rows] = await conn.query('SELECT * FROM Consulta WHERE Consulta.idTipoServicio =?', [req.params.id]);
    console.log(rows)
    res.json(rows);
 }   
@@ -56,7 +56,7 @@ export const getCotizacionTipoServicio = async (req,res) => {
 
 export const getCotizacionCliente = async (req,res) => {
     const conn = await connect();
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Cotizacion WHERE bv4rkfhexrvnpun4adpx.Cotizacion.idCliente =?', [req.params.id]);
+    const [rows] = await conn.query('SELECT * FROM Consulta WHERE Consulta.idCliente =?', [req.params.id]);
     res.json(rows);
     console.log(rows);
 }
@@ -66,7 +66,7 @@ export const getCotizacionCliente = async (req,res) => {
 
 export const setCotizaciones = async (req,res) => {
     const conn = await connect();
-    const result = await conn.query('INSERT INTO bv4rkfhexrvnpun4adpx.Cotizacion(Fecha,Estado,Mensaje,idTipoServicio,idCliente) VALUES(?,?, ?,?,?)',[req.body.fecha,"En espera",req.body.mensaje,req.body.idTipoServicio,req.body.idCliente]);
+    const result = await conn.query('INSERT INTO Consulta(fecha,estado,mensaje,idTipoServicio,idCliente) VALUES(?,?, ?,?,?)',[req.body.fecha,"En espera",req.body.mensaje,req.body.idTipoServicio,req.body.idCliente]);
     res.json(result[0]["insertId"]);
 }
 
@@ -74,7 +74,7 @@ export const setCotizaciones = async (req,res) => {
 export const updateCotizacion = async (req,res) => {
     const conn = await connect();
     //Date debe estar en formato 'YYYY-MM-DD'
-    const result = await conn.query('UPDATE bv4rkfhexrvnpun4adpx.Cotizacion SET Fecha =?, Estado =?, Mensaje =? WHERE idConsulta =?', [req.body.fecha, req.body.estado, req.body.mensaje, req.params.cotizacion]);
+    const result = await conn.query('UPDATE Consulta SET fecha =?, estado =?, mensaje =? WHERE idConsulta =?', [req.body.fecha, req.body.estado, req.body.mensaje, req.params.cotizacion]);
     console.log(result);
     res.json(result[0]["changedRows"]);
 }
@@ -86,14 +86,14 @@ export const updateCotizacion = async (req,res) => {
 //SERVICIOS API
 export const getServicios = async (req,res) => {
     const conn = await connect()
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Servicio')
+    const [rows] = await conn.query('SELECT * FROM Servicio')
     console.log(rows)
     res.json(rows)
 }
 
 export const setServicio = async (req,res) => {
     const conn = await connect();
-    const result = await conn.query('INSERT INTO bv4rkfhexrvnpun4adpx.Servicio(idTipoServicio,Descripcion,Costo,FechaInicio,FechaFin,idCliente) VALUES(?,?,?,?,?,?)',[req.body.idTipoServicio, req.body.descripcion, req.body.costo,req.body.fechaInicio,req.body.fechaFin,req.body.idCliente]);
+    const result = await conn.query('INSERT INTO Servicio(idTipoServicio,descripcion,costo,fechaInicio,fechaFin,idCliente) VALUES(?,?,?,?,?,?)',[req.body.idTipoServicio, req.body.descripcion, req.body.costo,req.body.fechaInicio,req.body.fechaFin,req.body.idCliente]);
     res.json(result[0]["insertId"]);
     console.log(result);
 }
@@ -102,7 +102,7 @@ export const setServicio = async (req,res) => {
 
 export const getServicioId = async (req,res) => {
     const conn = await connect();
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Servicio WHERE bv4rkfhexrvnpun4adpx.Servicio.idServicio =?', [req.params.id]);
+    const [rows] = await conn.query('SELECT * FROM Servicio WHERE Servicio.idServicio =?', [req.params.id]);
     res.json(rows);
     console.log(rows);
 }
@@ -110,14 +110,14 @@ export const getServicioId = async (req,res) => {
 
 export const getServicioFecha = async (req,res) => {
     const conn = await connect();
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Servicio WHERE bv4rkfhexrvnpun4adpx.Servicio.fechaInicio =?', [req.params.fechaInicio]);
+    const [rows] = await conn.query('SELECT * FROM Servicio WHERE Servicio.fechaInicio =?', [req.params.fechaInicio]);
     res.json(rows);
     console.log(rows);
 }   
 
 export const getServicioCliente = async (req,res) => {
     const conn = await connect();
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Servicio WHERE bv4rkfhexrvnpun4adpx.Servicio.idCliente =?', [req.params.id]);
+    const [rows] = await conn.query('SELECT * FROM Servicio WHERE Servicio.idCliente =?', [req.params.id]);
     res.json(rows);
     console.log(rows);
     
@@ -125,7 +125,7 @@ export const getServicioCliente = async (req,res) => {
 }
 export const updateServicio = async (req,res) => {
     const conn = await connect();
-    const result = await conn.query('UPDATE bv4rkfhexrvnpun4adpx.Servicio SET idTipoServicio =?, Descripcion =?, Costo =?, FechaInicio =?, FechaFin =?, idCliente =? WHERE idServicio =?', [req.body.idTipoServicio, req.body.descripcion, req.body.costo,req.body.fechaInicio,req.body.fechaFin,req.body.idCliente, req.params.id]);
+    const result = await conn.query('UPDATE Servicio SET idTipoServicio =?, descripcion =?, costo =?, fechaInicio =?, fechaFin =?, idCliente =? WHERE idServicio =?', [req.body.idTipoServicio, req.body.descripcion, req.body.costo,req.body.fechaInicio,req.body.fechaFin,req.body.idCliente, req.params.id]);
     res.json(result[0]["changedRows"]);
     console.log(result);
 }
@@ -133,14 +133,14 @@ export const updateServicio = async (req,res) => {
 
 export const setCliente = async(req,res) => {
     const conn = await connect();
-    const result = await conn.query('INSERT INTO bv4rkfhexrvnpun4adpx.Cliente(Nombre,Apellido,Correo,Empresa)VALUES(?,?,?,?)',[req.body.nombre,req.body.apellido,req.body.correo,req.body.empresa]);
+    const result = await conn.query('INSERT INTO Cliente(nombre,apellido,correo,empresa)VALUES(?,?,?,?)',[req.body.nombre,req.body.apellido,req.body.correo,req.body.empresa]);
     console.log(result);
     res.json(result[0]["insertId"]);
 }
 
 export const updateCliente = async (req,res) => {
     const conn = await connect();
-    const result = await conn.query('UPDATE bv4rkfhexrvnpun4adpx.Cliente SET Nombre =?, Apellido =?, Correo =?, Empresa =? WHERE idCliente =?', [req.body.nombre, req.body.apellido, req.body.correo, req.body.empresa, req.params.id]);
+    const result = await conn.query('UPDATE Cliente SET nombre =?, apellido =?, correo =?, empresa =? WHERE idCliente =?', [req.body.nombre, req.body.apellido, req.body.correo, req.body.empresa, req.params.id]);
     res.json(result[0]["changedRows"]);
     console.log(result);
     
@@ -148,14 +148,14 @@ export const updateCliente = async (req,res) => {
 
 export const getClientes = async (req,res) => {
     const conn = await connect();
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Cliente');
+    const [rows] = await conn.query('SELECT * FROM Cliente');
     res.json(rows);
     console.log(rows);
 }
 
 export const getClienteId = async(req,res) => {
     const conn = await connect();
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Cliente WHERE idCliente = ?',[req.params.idCliente]);
+    const [rows] = await conn.query('SELECT * FROM Cliente WHERE idCliente = ?',[req.params.idCliente]);
     res.json(rows);
     console.log(rows);
     
@@ -166,7 +166,7 @@ export const getClienteId = async(req,res) => {
 
 export const getUsuarios = async (req,res) => {
     const conn = await connect();
-    const [rows] = await conn.query('SELECT * FROM bv4rkfhexrvnpun4adpx.Usuario');
+    const [rows] = await conn.query('SELECT * FROM Usuario');
     res.json(rows);
     console.log(rows);
 }
@@ -174,7 +174,24 @@ export const getUsuarios = async (req,res) => {
 
 export const setUsuario = async (req,res) => {
     const conn = await connect();
-    const result = await conn.query('INSERT INTO bv4rkfhexrvnpun4adpx.Usuario(correo,password,numeroTelefono)VALUES(?,?,?)',[req.body.correo, req.body.password,req.body.numeroTelefono]);
+    const result = await conn.query('INSERT INTO Usuario(correo,password,numeroTelefono,nombre,apellido)VALUES(?,?,?,?,?)',[req.body.correo, req.body.password,req.body.numeroTelefono,req.body.nombre,req.body.apellido]);
     console.log(result);
     res.json(result[0]["insertId"]);
 }
+
+
+export const setBlog = async (req,res) => {
+    const conn = await connect();
+    const result = await conn.query('INSERT INTO Blog(nombreBlog,urlPost,urlImagen)VALUES(?,?,?)',[req.body.nombre, req.body.urlPost,req.body.urlImagen]);
+    console.log(result);
+    res.json(result[0]["insertId"]);
+}
+
+
+export const getBlogs = async (req,res) => {
+    const conn = await connect();
+    const [rows] = await conn.query('SELECT * FROM Blog');
+    res.json(rows);
+    console.log(rows);
+}
+

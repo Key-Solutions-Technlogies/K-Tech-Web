@@ -1,1 +1,8 @@
-config.js
+.env
+
+
+.dist
+
+
+node_modules
+.vercel
