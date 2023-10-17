@@ -39,6 +39,13 @@ nav ul li a {
 }
 
 
+nav ul li a:hover {
+    border: solid 4px var(--darkBlue);
+    background-color: var(--darkBlue);
+    color: white;
+
+}
+
 
 
 

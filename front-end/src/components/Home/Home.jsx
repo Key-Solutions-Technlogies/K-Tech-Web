@@ -1,16 +1,21 @@
 import React from 'react'
 import { logo } from '../../assets/index'
 import { Link } from "react-router-dom";
-import {  Header, Navbar, Services, Solutions,Blog, Footer, Capacitaciones } from '../index';
+import {  Header, Navbar, Services, Solutions,Blog, Footer, Capacitaciones,Herramientas, Informacion } from '../index';
+
 
 const Home = () => {
   return <>
-    <Services/>
+    
     <Header />
-  <Capacitaciones/>
+    <Services/>
+    <Herramientas />
+    {/* <Blog /> */}
+    <Informacion/>
+  {/* <Capacitaciones/>
   <Services />
   <Blog />
-    <Solutions />
+    <Solutions /> */}
 
   <Footer />
   </>

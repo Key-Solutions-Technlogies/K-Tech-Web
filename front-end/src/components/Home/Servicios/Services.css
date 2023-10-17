@@ -1,149 +1,126 @@
 
-
-.services
+.servicios-container
 {
-    background-color: var(--darkBlue);
-    height: 1000px;
-    width: 100%;
-
+    margin-top: 55px;
+    margin-bottom: 65px;
 }
 
-
-
-.tiposServicios
+.servicios-h1
 {
-    
-    
-    display: grid;
-    justify-content: space-around;
-    
-    grid-template-columns: 550px 550px ;
-    grid-gap: 200px;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    
-    
-}
-
-.tiposServicios-mapeado
-{
-    
-  min-width: 200px; /* Ancho mínimo de cada componente */
-  padding: 10px;
-  margin-right: 10px; /* Espacio entre componentes */
-  color: white;
-
-}
-
-.iconoCircular
-{
-    background: lightblue;
-    border-radius: 50%;
-    width: 174px;
-    height: 174px;
-    border: solid 4px #fff;
-}
-
-
-
-
-.tiposServicios-mapeado
-{
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    
-}
-  
-.titulos-tipoServicios-mapeado
-{
-    align-items: center;
-    
-    
-}
-
-
-.tituloServicios-mapeado
-{
-    color: #FFF;
+    color: #022C5C;
+    text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Display;
+    font-family: Poppins;
     font-size: 30px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 32px; /* 128% */
-    list-style: circle;
-    position: relative;
-}
-
-.descripcionServicio
-{
-    color: #FFF;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Display;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 25px; /* 125% */
+    font-weight: 500;
+    line-height: 32px;
+    margin: auto;
+    padding-top: 20px;
 }
 
 
-.botonServicio
+
+
+.contenedor-servicios-servicios
 {
-    border-radius: 4px;
-    border: 1px solid var(--banco-pichincha-primary-blue-500, #0F265C);
-    background: #47C736;
+    
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 300px 300px 300px ;
+    gap:40px;
+    width: auto;
+}
+
+
+.tarjeta-contenedor
+{
+    background-color: #F5F5F5;
+    border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+   
+    height: 350px;
+    position: relative;
+    
+    
+    
+
+}
+.contenedor-tarjeta-servicio
+{
+    
+    place-items: center;
+    display: grid;
+    
+    
+    
+    
+    
+}
+
+
+.imagen-tarjeta
+{
+    object-fit: cover;
+    width:100%;
+    height:40%;
+    border-radius: 10px;
+    background: lightgray 50% / cover no-repeat;
+}
+
+
+.contenedor-tarjeta-servicio h1
+{
+
+    color: #1B2D54;
+    
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: bold;
+    font-weight: 600;
+    line-height: 24px; 
+    margin:20px;
+}
+
+
+.contenedor-tarjeta-servicio a
+{
+
+    border-radius: 4px;
+    background: #1B2D54;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20); 
+    color: white;
     display: flex;
     width: 172px;
     height: 28px;
-    padding: 5px 5px;
+    padding: 10px 8px;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    color: var(--darkBlue);
-}
-
-.tituloPrincipal-mapeado
-{
-    position: relative;
-    justify-content:space-evenly;
-    display: flex;
-    align-items: center;
-}
-.punto
-{
-   
-    height: 10px;
+    position: absolute;
     bottom: 10px;
+ 
     
 }
 
 
-.titulo-Servicio-h2
+.contenedor-tarjeta-servicio a:hover
 {
-    color: #FFF;
+
+    background: white;
+    color: #1B2D54;
+
+ 
+    
+}
+
+.servicios-detalles
+{
+    color: #1B2D54;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Display;
-    font-size: 30px;
+    font-family: Poppins;
+    font-size: 14px;
     font-style: normal;
     font-weight: 300;
-    line-height: 32px; /* 106.667% */
-    padding-left: 54px;
-    padding-top: 54px;
-    margin-bottom: 0;
+    line-height: 24px; /* 171.429% */
 }
 
-
-.titulo-Servicio-h1
-{
-    color: #FFF;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Display;
-    font-size: 45px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px; /* 71.111% */
-    padding-left: 54px;
-    
-    margin-top:11px;
-}

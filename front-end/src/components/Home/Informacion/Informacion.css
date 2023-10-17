@@ -1,0 +1,147 @@
+
+.contenedor-seccion-informacion
+{
+    
+    display: grid;
+    place-items: center;
+    background-image: url("../../../assets/bannerInfo.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    width: 100;
+    padding: 50px;
+    
+}
+
+.titulo-seccion
+{
+    color: #022C5C;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.parrafo-seccion
+{
+    text-align: center;
+    color: white;
+    
+    font-family: Poppins;
+    font-size: 20px;
+    width: 50%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+
+.titulo2
+{
+    
+    
+    color: #022C5C;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    margin: auto;
+    padding-top: 20px;
+    
+    
+    
+}
+
+
+.retrato
+{
+    border-radius: 50%;
+    width: 100px;
+}
+
+.contenedor-seccion-informacion2
+{
+    display: grid;
+    justify-content: center;
+    
+    
+    grid-template-columns: 400px 400px ;
+    gap:40px;
+    
+    padding: 30px;
+    
+
+}
+
+
+.tarjeta
+{
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+   
+    height: 350px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    
+}
+
+.contenedor-header
+{
+    background-color: #F5F5F5;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+
+.nombre-tarjeta
+{
+    color: #0455B1;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    margin: auto;
+    padding-top: 20px;
+
+}
+
+.puesto
+{
+    color: black;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    margin: auto;
+    padding-top: 20px;
+
+}
+
+
+.botonConocer
+{
+    border-radius: 4px;
+    background: #022C5C;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    padding: 10px;
+}

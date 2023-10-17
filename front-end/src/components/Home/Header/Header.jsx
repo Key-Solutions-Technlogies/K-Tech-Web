@@ -1,13 +1,13 @@
 import React from 'react'
 import "./Header.css"
-import Navbar from "../Navbar/Navbar";
+import Navbar from '../../Navbar/navbar'
 
 
 const Header = () => {
   return (
     
     <header>
-      <Navbar />
+      <Navbar/>
       <div className="wrapper">
         
           <h2 className="header-title">Somos la llave de su</h2>

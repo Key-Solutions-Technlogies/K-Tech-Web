@@ -1,9 +1,9 @@
 header {
-    min-height: 60vh;
+    min-height: 80vh;
     width: 100;
     
     
-    background-image: url('../../assets/formacionPersonal.jpg');
+    background-image: url('../../../assets/bannerHeader2.png');
     background-size: cover;
     background-position: center;
     
@@ -11,7 +11,7 @@ header {
 
 .wrapper {
     
-    font-family: SF Pro Display;
+    font-family: poppins;
     width: 100%;
     position: absolute;
     padding-left: 40px;
@@ -20,6 +20,7 @@ header {
     max-width: 427px;
     margin-bottom: 0;
     display: inline;
+    right: 0;
     
     
     
