@@ -2,12 +2,12 @@ import React from 'react'
 import { Element, animateScroll as scroll, scroller } from 'react-scroll';
 import { useState,useEffect} from 'react';
 import axios from 'axios';
-import "./Services.css";
+import "./ServicesH.css";
 import Fade from 'react-reveal/Fade';
 
 
 
-const Services = () => {
+const ServicesH = () => {
 
 
   return (
@@ -115,4 +115,4 @@ const Services = () => {
   
 }
 
-export default Services
+export default ServicesH

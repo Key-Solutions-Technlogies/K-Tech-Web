@@ -1,7 +1,9 @@
 import React from 'react'
 import "./Navbar.css"
 import { logoNormal } from '../../assets/index'
-import { Link } from "react-router-dom";
+import { Link, NavLink  } from "react-router-dom";
+
+
 
 
 const Navbar = () => {
@@ -13,8 +15,8 @@ const Navbar = () => {
       </a>
       <ul className='menu'>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="sobre-nosotros">Servicios</Link></li>
-        <li><a href='#'>Contactenos</a></li>
+        <li><Link to="/servicios">Servicios</Link> </li>
+        <li><Link to="/contacto">Contactenos</Link></li>
         <li><a href='#'>Servicios</a></li>
         <li><a href='#'>Blog</a></li>
         

@@ -145,3 +145,10 @@
     color: white;
     padding: 10px;
 }
+
+.botonConocer:hover
+{
+    color: #022C5C;
+    background: #fff;
+
+}

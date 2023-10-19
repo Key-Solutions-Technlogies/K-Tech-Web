@@ -1,0 +1,13 @@
+.header-servicios
+{
+    min-height: 80vh;
+    width: 100;
+    position: relative;
+    
+    background-image: url("../../assets/bannerInfo.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+

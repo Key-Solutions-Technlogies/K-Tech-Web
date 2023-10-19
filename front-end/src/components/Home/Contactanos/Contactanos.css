@@ -1,11 +1,12 @@
-.header-home {
+.seccionContacto {
     min-height: 80vh;
     width: 100;
-    position: relative;
-    
     background-image: url('../../../assets/bannerHeader2.png');
     background-size: cover;
     background-position: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    
     
 }
 
@@ -13,7 +14,7 @@
     
     font-family: poppins;
     width: 100%;
-    position: absolute;
+    position: relative;
     padding-left: 40px;
     top: 150px;
     color: var(--darkBlue);
@@ -26,20 +27,18 @@
     
 }
 
-.wrapper .btn-cotizacion-header{
+.wrapper .btn-cotizacion{
     border-radius: 4px;
     background: var(--darkBlue);
     color: #fff;
     padding: 12px 16px;
     font-weight: 600;
     font-size: 14px;
-    margin-left: 30px;
-    
     
 
 }
 
-header .wrapper .btn-cotizacion-header:hover{
+header .wrapper .btn-cotizacion:hover{
     border-radius: 4px;
     background: #fff;
     color: var(--darkBlue);
@@ -50,19 +49,16 @@ header .wrapper .btn-cotizacion-header:hover{
 }
 
 
-.header-title-header
+.header-title
 {
     font-family: SF Pro Display;
     font-size: 40px;
     font-weight: 300;
-    margin-left: 30px;
-    
+    padding: 0;
     margin-bottom: 0;
-    
-   
 }
 
-.header1-title-header
+.header1-title
 {
     font-family: SF Pro Display;
     font-size: 40px;
@@ -70,7 +66,14 @@ header .wrapper .btn-cotizacion-header:hover{
     position: relative;
     margin-top: 0;
     margin-bottom: 50px;
-    margin-left: 30px;
-    
-    
+}
+
+
+.contenedor-formulario
+{
+    background: linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(315deg, #ffffff 25%, transparent 25%) ,linear-gradient(45deg, transparent 24%,#022C5C 25%, #022C5C 30%, transparent 31%, transparent 39%,#022C5C 40%, #022C5C 45%, transparent 45%),linear-gradient(315deg, transparent 24%,#022C5C 25%, #022C5C 30%, transparent 31%, transparent 39%,#022C5C 40%, #022C5C 45%, transparent 45%);
+    background-size: 3em 3em;
+    background-color: #ffffff;
+    opacity: 1;
+    height:1020px;
 }

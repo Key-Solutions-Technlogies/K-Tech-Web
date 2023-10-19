@@ -1,17 +1,29 @@
 import React from 'react'
-import { Routes, Route } from "react-router-dom"
-import {  Header, Navbar, Services, Solutions,Blog, Footer, Capacitaciones,Home } from './components'
+import { Routes, Route, Navigate } from "react-router-dom"
+
+import Home from './components/Home/Home';
+import Services from './components/Services/Services';
+import { Contactanos } from './components';
+
+
 
 const App = () => {
   return <>
   <Routes>
-        <Route path="/" element={ <Home/> } />
-        <Route path="sobre-nosotros" element={ <Capacitaciones /> } />
-        <Route path="contacto" element={ <Blog /> } />
+    
+    <Route path='/' element ={<Home/>}> </Route>
+    
+    <Route path='/servicios' element ={<Services/>}></Route>
+    <Route path='/contacto' element ={<Contactanos/>}></Route>
+    
+
+
+    
   </Routes>
   
+  
   </>;
-  1
+  
 };
 
 export default App
